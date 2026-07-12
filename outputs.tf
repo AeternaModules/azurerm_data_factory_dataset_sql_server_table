@@ -1,3 +1,7 @@
+output "data_factory_dataset_sql_server_tables_id" {
+  description = "Map of id values across all data_factory_dataset_sql_server_tables, keyed the same as var.data_factory_dataset_sql_server_tables"
+  value       = { for k, v in azurerm_data_factory_dataset_sql_server_table.data_factory_dataset_sql_server_tables : k => v.id }
+}
 output "data_factory_dataset_sql_server_tables_additional_properties" {
   description = "Map of additional_properties values across all data_factory_dataset_sql_server_tables, keyed the same as var.data_factory_dataset_sql_server_tables"
   value       = { for k, v in azurerm_data_factory_dataset_sql_server_table.data_factory_dataset_sql_server_tables : k => v.additional_properties }
